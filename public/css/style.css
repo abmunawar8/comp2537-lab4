@@ -1,12 +1,10 @@
 /* Spinner Feature */
 .loader {
-    /* Change 1: SIZE - Increased from 48px to 64px for better visibility */
-    width: 64px;
+    width: 64px;                            /* Change 1: Increased size */
     height: 64px;
     border-radius: 50%;
     position: relative;
-    /* Change 2: TIMING - Slowed down the rotation from 1s to 1.5s */
-    animation: rotate 1.5s linear infinite;
+    animation: rotate 1.5s linear infinite; /* Change 2: Slowed rotation */
 }
 
 .loader::before, .loader::after {
@@ -15,14 +13,13 @@
     position: absolute;
     inset: 0px;
     border-radius: 50%;
-    /* Change 3: COLORS - Changed from White/Orange to dark grey and Pokéball Red (#EE1515) */
-    border: 5px solid #333;
+    border: 5px solid #333;              /* Change 3: Updated colours */
     animation: prixClipFix 2s linear infinite;
 }
 
 .loader::after {
     transform: rotate3d(90, 90, 0, 180deg);
-    border-color: #EE1515;
+    border-color: #EE1515;              /* Change 3: Updated colours */
 }
 
 @keyframes rotate {
@@ -53,8 +50,7 @@
     overflow: hidden;
     top: 0;
     left: 0;
-    /* Change 1: COLORS - Changed overlay from light grey to dark semi-transparent black for high contrast */
-    background-color: rgba(0, 0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0); /* Change 1: Darkened hover overlay */
     transition: all 0.4s ease-in-out;
 }
 
@@ -66,8 +62,7 @@
     display: block;
     position: relative;
     width: 100%;
-    /* Change 2: MOVEMENT - Inverted the scale. Original shrank from 1.1 to 1. This zooms IN from 1.0 to 1.15 */
-    transform: scale(1.0);
+    transform: scale(1.0);           /* Change 2: Scale zooms in on hover */
     transition: all 0.4s ease-in-out;
 }
 
@@ -77,8 +72,7 @@
 
 .hovereffect .pokemon-stats {
     text-transform: uppercase;
-    /* Change 3: TYPOGRAPHY - Changed text color to Pokémon Yellow and adjusted positioning */
-    color: #FFCB05; 
+    color: #FFCB05;               /* Change 3: Updated text colour */
     text-align: center;
     position: relative;
     font-size: 14px;
